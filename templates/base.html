@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <i class='bx bxl-django'></i>
+                <span class="sidebar-title">Ivan Tilleria Django</span>
+            </div>
+            <i class="bx bx-menu" id="sidebar-btn"></i>
+        </div>
+        <hr class="sidebar-divider">
+        <ul>
+            <li>
+                <a href="{% url 'add_student' %}">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="sidebar-nav-item">Añadir estudiante</span>
+                </a>
+                <span class="sidebar-tooltip">Añadir estudiante</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-list-ul' ></i>
+                    <span class="sidebar-nav-item">Students</span>
+                </a>
+                <span class="sidebar-tooltip">Students</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user-plus' ></i>
+                    <span class="sidebar-nav-item">Add students</span>
+                </a>
+                <span class="sidebar-tooltip">Add students</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user-minus'></i>
+                    <span class="sidebar-nav-item">Delete multiple</span>
+                </a>
+                <span class="sidebar-tooltip">Delete multiple</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+<script>
+    let sidebar_btn = document.querySelector('#sidebar-btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    sidebar_btn.onclick = function () {
+    sidebar.classList.toggle('active');
+};
+</script>
+</html>
