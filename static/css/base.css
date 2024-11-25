@@ -11,7 +11,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: calc(100vh + 3.4%);
     width: 80px;
     background-color: #12171e;
     padding: 0.4rem 0.8rem;
@@ -136,11 +136,20 @@
 
 .main-content{
     position: relative;
-    background-color: #eee;
+    background-color: rgb(98, 98, 100);
     min-height: 100vh;
     top: 0;
     left: 80px;
     transition: all 0.5s ease;
     width: calc(100% - 80px);
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content-page{
+    background-color: #eeee;
+    height: 100vh;
+    width: 75rem
 }
