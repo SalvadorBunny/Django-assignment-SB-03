@@ -23,4 +23,9 @@ urlpatterns = [
     path('', views.mainpage, name='mainpage'),
     path('add_student/', views.add_students, name='add_student'),
     path('list_student/', views.list_students, name='list_student'),
+    path('edit_student/<int:id>', views.edit_students, name='edit_student'),
+    path('delete/<int:id>', views.delete_students, name='delete_student'),
+    path('select_student/edit', views.select_student, name='select_student_edit'),
+    path('select_student/delete', views.select_student_delete, name='select_student_delete'),
+    path('select_student/search', views.search_student, name='alumno_search'),
 ]

@@ -9,4 +9,4 @@ class Alumnos(models.Model):
     nota3=models.DecimalField(max_digits=10, decimal_places=2)
     nombre=models.CharField(max_length=50)
     fechaIngreso=models.DateField()
-    carrera= models.CharField(max_length=50)
+    carrera= models.CharField(default= 'Sin carrera',max_length=50)

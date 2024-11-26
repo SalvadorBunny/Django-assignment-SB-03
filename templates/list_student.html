@@ -1,6 +1,6 @@
-{% extends 'base.html'%}
+{% extends 'list_block.html'%}
 
-{% block content %}
+{% block list %}
     <h1>student list</h1>
     <hr>
     {% if alumnos %}
@@ -9,12 +9,11 @@
                 <tr>
                     <th>id</th>
                     <th>nombre</th>
-                    <th>fecha ingreso</th>
                     <th>nota1</th>
                     <th>nota2</th>
                     <th>nota3</th>
+                    <th>fecha ingreso</th>
                     <th>carrera</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -28,7 +27,6 @@
                         <td>{{alumno.fechaIngreso}}</td>
                         <td>{{alumno.carrera}}</td>
                     </tr>
-
                 {% endfor %}
             </tbody>
         </table>

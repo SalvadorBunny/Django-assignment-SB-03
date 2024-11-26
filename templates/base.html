@@ -20,11 +20,11 @@
         <hr class="sidebar-divider">
         <ul>
             <li>
-                <a href="{% url 'add_student' %}">
+                <a href="{% url 'mainpage' %}">
                     <i class="bx bxs-grid-alt"></i>
-                    <span class="sidebar-nav-item">Añadir estudiante</span>
+                    <span class="sidebar-nav-item">Index</span>
                 </a>
-                <span class="sidebar-tooltip">Añadir estudiante</span>
+                <span class="sidebar-tooltip">Index</span>
             </li>
             <li>
                 <a href="{% url 'list_student' %}">
@@ -34,18 +34,25 @@
                 <span class="sidebar-tooltip">Students</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{% url 'add_student' %}">
                     <i class='bx bx-user-plus' ></i>
-                    <span class="sidebar-nav-item">Add students</span>
+                    <span class="sidebar-nav-item">Añadir estudiante</span>
                 </a>
-                <span class="sidebar-tooltip">Add students</span>
+                <span class="sidebar-tooltip">Añadir estudiante</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{% url 'select_student_delete' %}">
                     <i class='bx bx-user-minus'></i>
-                    <span class="sidebar-nav-item">Delete multiple</span>
+                    <span class="sidebar-nav-item">Eliminar alumno</span>
                 </a>
-                <span class="sidebar-tooltip">Delete multiple</span>
+                <span class="sidebar-tooltip">Eliminar alumno</span>
+            </li>
+            <li>
+                <a href="{% url 'select_student_edit' %}">
+                    <i class='bx bx-edit-alt'></i>
+                    <span class="sidebar-nav-item">Editar alumno</span>
+                </a>
+                <span class="sidebar-tooltip">Editar alumno</span>
             </li>
         </ul>
     </div>

@@ -124,6 +124,7 @@
     line-height: 1.8rem;
     z-index: 20;
     display: none;
+    background-color: #ffff;
 }
 
 .sidebar ul li:hover .sidebar-tooltip {
@@ -151,5 +152,5 @@
 .main-content-page{
     background-color: #eeee;
     height: 100vh;
-    width: 75rem
+    width: 70%
 }

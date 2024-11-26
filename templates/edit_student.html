@@ -1,6 +1,6 @@
-{% extends 'base.html'%}
+{% extends 'list_block.html'%}
 
-{% block content %}
+{% block list %}
     <h1>student list</h1>
     <hr>
     {% if alumnos %}
@@ -10,11 +10,8 @@
                     <th>id</th>
                     <th>nombre</th>
                     <th>fecha ingreso</th>
-                    <th>nota1</th>
-                    <th>nota2</th>
-                    <th>nota3</th>
                     <th>carrera</th>
-
+                    <th>editar</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,11 +19,11 @@
                     <tr>
                         <td>{{alumno.id}}</td>
                         <td>{{alumno.nombre}}</td>
-                        <td>{{alumno.nota1}}</td>
-                        <td>{{alumno.nota2}}</td>
-                        <td>{{alumno.nota3}}</td>
                         <td>{{alumno.fechaIngreso}}</td>
                         <td>{{alumno.carrera}}</td>
+                        <td>
+                            <a class="delete-button" href="{% url 'edit_student' alumno.id %}"> editar </a>
+                        </td>
                     </tr>
 
                 {% endfor %}
